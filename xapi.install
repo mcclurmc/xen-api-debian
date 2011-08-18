@@ -71,4 +71,5 @@
 /etc/xapi.conf
 /etc/xapi.d
 /etc/xensource
+/etc/init.d/{xapissl}
 /lib

@@ -25,3 +25,4 @@ dom0-setup-idempotent
 python-XenAPI-install-path
 xapissl-script-install
 fix-vbd-plug
+fix-python-install

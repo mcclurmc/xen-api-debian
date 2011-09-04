@@ -1,0 +1,21 @@
+--- a/scripts/examples/python/OMakefile
++++ b/scripts/examples/python/OMakefile
+@@ -11,7 +11,7 @@ PYTHON_EXE=vm_start_async.py watch-all-events.py powercycle.py install.py fixpbd
+ PYTHON_LIB=XenAPI.py provision.py
+ PYTHON_SRC=$(PYTHON_EXE) $(PYTHON_LIB)
+ PYTHON_HTML=$(addsuffix .html, $(PYTHON_SRC))
+-PYTHON_DIR=python2.4
++PYTHON_DIR=python2.6
+
+ .PHONY: html-versions
+ # note that enscript is not in the build chroot, so this target will fail.
+@@ -40,7 +40,7 @@ install:
+        mkdir -p $(LIBEXEC)
+        mkdir -p $(DESTDIR)/usr/lib/$(PYTHON_DIR)/site-packages
+        mkdir -p $(DESTDIR)/etc/xapi.d/plugins
+-       $(IDATA) XenAPIPlugin.py XenAPI.py inventory.py $(DESTDIR)/usr/lib/$(PYTHON_DIR)/site-packages/
++       $(IDATA) XenAPIPlugin.py XenAPI.py inventory.py $(DESTDIR)/usr/lib/$(PYTHON_DIR)/dist-packages/
+        $(IEXE) echo.py $(DESTDIR)/etc/xapi.d/plugins/echo
+        $(IEXE) wake-on-lan.py $(DESTDIR)/etc/xapi.d/plugins/wake-on-lan
+        $(IEXE) shutdown.py $(LIBEXEC)/shutdown
+

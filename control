@@ -41,3 +41,7 @@ Description: The ocaml libraries for talking to xapi
 Package: xapi-debug
 Architecture: any
 Description: Binary utils to help debug xapi
+
+Package: python-xenapi
+Architecture: any
+Description: Python bindings for the XenAPI XML-RPC interface.

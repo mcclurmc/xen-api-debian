@@ -11,14 +11,15 @@
 # build-arch and build-indep targets  by Bill Allombert 2001
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 # This has to be exported to make some magic below work.
 export DH_OPTIONS
 
+include /usr/share/cdbs/1/class/python-distutils.mk
 
 %:
-	dh $@ 
+	dh $@ --with python2
 
 clean: 
 	dh clean

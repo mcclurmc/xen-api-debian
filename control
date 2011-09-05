@@ -44,4 +44,6 @@ Description: Binary utils to help debug xapi
 
 Package: python-xenapi
 Architecture: any
+Depends: ${python:Depends}
+Build-Depends: python
 Description: Python bindings for the XenAPI XML-RPC interface.
